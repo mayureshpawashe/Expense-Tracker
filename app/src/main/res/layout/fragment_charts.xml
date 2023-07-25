@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChartsFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="7dp"
+        android:baselineAligned="false"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            >
+
+            <TextView
+                android:id="@+id/DateStart"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_margin="3dp"
+
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/SkyBlueFaint"
+                android:gravity="center"
+                android:hint="@string/select_start_date" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/DateEnd"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_margin="3dp"
+                android:background="@color/SkyBlueFaint"
+                android:gravity="center"
+                android:hint="@string/select_end_date" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/ChartBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/generate"
+        android:padding="1dp"
+        android:layout_margin="2dp"
+        android:layout_gravity="center"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="VisualLintBounds">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_chart"
+                android:layout_width="650dp"
+                android:layout_height="450dp"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        tools:ignore="NestedScrolling">
+
+        <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SkyBlueFaint"
+                android:stretchColumns="*">
+
+                <TableRow tools:ignore="UselessParent">
+                    <TextView
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubf"
+                        android:background="@color/SkyBlueDark"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/ubf"
+                        android:background="@color/SkyBlueDark"
+                        android:padding="8dp"/>
+                </TableRow>
+
+            </TableLayout>
+    </ScrollView>
+</LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+
+

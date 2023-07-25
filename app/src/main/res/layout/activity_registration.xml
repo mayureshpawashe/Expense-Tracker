@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/edittext_bg"
+    tools:context=".RegistrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/create_account"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold" />
+
+            <EditText
+
+                android:id="@+id/email_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="3dp"
+                android:hint="@string/email"
+                android:background="@color/white"
+                android:minHeight="48dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,TextFields,VisualLintTextFieldSize"
+                android:autofillHints="" />
+
+            <EditText
+
+                android:id="@+id/password_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="3dp"
+                android:background="@color/white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
+
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/sign_up"
+                android:background="@drawable/buttondesign"
+                android:textColor="@color/white"
+                android:textAppearance="?android:textAppearanceLarge"
+                app:cornerRadius="30dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <TextView
+                android:id="@+id/signin_here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Already have an account? Sign in Here."
+                android:textColor="#546E7A"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
